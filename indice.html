@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde | Marketplace de Mercearia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f8f3;
+        }
+        
+        header {
+            padding: 15px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3c8c3e;
+            text-decoration: none;
+        }
+        
+        .search-bar {
+            display: flex;
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .search-bar button {
+            margin-left: -40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-actions a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        nav {
+            background-color: #3c8c3e;
+            padding: 12px 10%;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-right: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .hero {
+            display: flex;
+            padding: 40px 10%;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f8f3;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: right;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 10%;
+            background-color: #f9f8f3;
+        }
+        
+        .feature-card {
+            background-color: #f5f3e6;
+            padding: 20px;
+            border-radius: 8px;
+            width: 30%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #3c8c3e;
+        }
+        
+        .categories {
+            padding: 40px 10%;
+            background-color: #f9f8f3;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 24px;
+        }
+        
+        .view-all {
+            display: block;
+            text-align: right;
+            margin: 20px 0;
+            color: white;
+            background-color: #3c8c3e;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            width: fit-content;
+            margin-left: auto;
+        }
+        
+        .sell-section {
+            display: flex;
+            background-color: white;
+            padding: 40px 10%;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .sell-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .sell-image {
+            flex: 1;
+        }
+        
+        .sell-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        
+        .sell-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .sell-features {
+            margin: 25px 0;
+        }
+        
+        .sell-feature {
+            margin-bottom: 15px;
+        }
+        
+        .sell-cta {
+            display: inline-block;
+            background-color: #3c8c3e;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .sertao-banner {
+            background-color: #3c8c3e;
+            color: white;
+            padding: 30px 10%;
+            text-align: center;
+        }
+        
+        .sertao-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .sertao-description {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .sertao-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .btn-white {
+            background-color: white;
+            color: #3c8c3e;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 10% 20px;
+        }
+        
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            width: 30%;
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .newsletter {
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            width: 100%;
+        }
+        
+        .newsletter button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Verde</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar produtos...">
+            <button>🔍</button>
+        </div>
+        <div class="user-actions">
+            <a href="#">Entrar</a>
+            <a href="#">Carrinho</a>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Mercearia</a></li>
+            <li><a href="#">Orgânicos</a></li>
+            <li><a href="#">Artesanato</a></li>
+            <li><a href="#">Cosméticos Naturais</a></li>
+            <li><a href="#">Produtos Caseiros</a></li>
+            <li><a href="#">Ver Todas</a></li>
+        </ul>
+    </nav>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1 style="display: none;">Verde - Marketplace de Mercearia</h1>
+            <a href="#" class="cta-button">Explorar produtos →</a>
+        </div>
+        <div class="hero-image">
+            <img src="/api/placeholder/400/320" alt="Prateleira de verduras e frutas frescas">
+        </div>
+    </div>
+    
+    <div class="features">
+        <div class="feature-card">
+            <div class="feature-icon">⭕</div>
+            <div>
+                <h3>Sem taxas extras</h3>
+                <p>Zero comissões para vendedores e consumidores</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💳</div>
+            <div>
+                <h3>Pagamento por PIX</h3>
+                <p>Rápido, seguro e sem complicações</p>
+            </div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📦</div>
+            <div>
+                <h3>Frete Grátis</h3>
+                <p>Em todas as suas compras, sem valor mínimo</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="categories">
+        <h2 class="section-title">Categorias em Destaque</h2>
+        <!-- Aqui iria a lista de categorias -->
+        <a href="#" class="view-all">Ver Todas</a>
+    </div>
+    
+    <div class="sell-section">
+        <div class="sell-content">
+            <h2 class="sell-title">Venda seus produtos sem taxas ou comissões</h2>
+            <p>Conecte-se diretamente com consumidores e receba pagamentos instantâneos por PIX, sem intermediários!</p>
+            
+            <div class="sell-features">
+                <div class="sell-feature">
+                    <p>Cadastre-se gratuitamente em menos de 5 minutos</p>
+                </div>
+                <div class="sell-feature">
+                    <p>Gerencie seu catálogo de produtos facilmente</p>
+                </div>
+                <div class="sell-feature">
+                    <p>Receba pelo PIX sem taxas adicionais</p>
+                </div>
+                <div class="sell-feature">
+                    <p>Acompanhe seus pedidos em tempo real</p>
+                </div>
+            </div>
+            
+            <a href="#" class="sell-cta">Comece a vender →</a>
+        </div>
+        <div class="sell-image">
+            <img src="/api/placeholder/400/320" alt="Vendedora utilizando a plataforma Verde">
+        </div>
+    </div>
+    
+    <div class="sertao-banner">
+        <h2 class="sertao-title">Pronto para descobrir os sabores do sertão?</h2>
+        <p class="sertao-description">Apoie produtores locais, economize com produtos sem taxas, e desfrute de produtos naturais e de qualidade com precepção.</p>
+        <div class="sertao-buttons">
+            <a href="#" class="btn-white">Explorar produtos →</a>
+            <a href="#" class="btn-outline">Seja um vendedor</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-top">
+            <div class="footer-column">
+                <h3 class="footer-title">Verde</h3>
+                <p>Conectando o campo à sua casa, sem intermediários ou taxas extras.</p>
+                <div class="social-icons">
+                    <a href="#">📱</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📷</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Navegação</h3>
+                <div class="footer-links">
+                    <a href="#">Página Inicial</a>
+                    <a href="#">Categorias</a>
+                    <a href="#">Produtos Populares</a>
+                    <a href="#">Vendedores</a>
+                    <a href="#">Como Funciona</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Contato</h3>
+                <p>📧 contato@verde.com.br</p>
+                <p>📞 (85) 3876-5422</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Receba nossas novidades">
+                    <button>→</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Verde. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
