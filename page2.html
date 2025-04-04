@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .feature-icon {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #3c8c3e;
+            text-align: center;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .view-all {
+            display: block;
+            text-align: right;
+            margin: 20px 0;
+            color: white;
+            background-color: #3c8c3e;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            width: fit-content;
+            margin-left: auto;
+        }
+
+        .sell-section {
+            display: flex;
+            background-color: white;
+            padding: 40px 10%;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .sell-content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        
+        .sell-image {
+            flex: 1;
+        }
+
+        .sell-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .sell-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .sell-features {
+            margin: 25px 0;
+        }
+        
+        .sell-cta {
+            display: inline-block;
+            background-color: #3c8c3e;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: auto;
+        }
+
+        .sertao-banner {
+            background-color: #3c8c3e;
+            color: white;
+            padding: 30px 10%;
+            text-align: center;
+            border-radius: 20px;
+        }
+        
+        .sertao-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        .sertao-description {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .sertao-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-white {
+            background-color: white;
+            color: #3c8c3e;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: auto;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 10% 20px;
+        }
+        
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            text-align: center;
+            border-top: 1px solid #555;
+            padding-top: 15px;
+            font-size: 14px;
+            color: #aaa;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            align-items: center;
+        }
+        
+        .social-icons a {
+            display: block;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+        
+        .newsletter {
+            display: flex;
+            margin-top: 15px;
+        }
+        
+        .newsletter input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            width: 100%;
+        }
+        
+        .newsletter button {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            font-size: 14px;
+            color: #aaa;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+<header class="logo">Verde</a>
+<div class="search-bar">
+<input type="text" placeholder="Pesquisar produtos...">
+<button>🔍</button>
+</div>
+<div class="user-actions">
+<a href="#">Entrar</a>
+<a href="#">Carrinho</a>
+</div>
+</header>
+<nav>
+<ul>
+<li><a href="#">Mercearia</a></li>
+<li><a href="#">Orgânicos</a></li>
+<li><a href="#">Artesanato</a></li>
+<li><a href="#">Cosméticos Naturais</a></li>
+<li><a href="#">Produtos Caseiros</a></li>
+<li><a href="#">Ver Todas</a></li>
+</ul>
+</nav>
+<div class="hero">
+<div class="hero-content">
+<h1>Verde - Marketplace de Mercera</h1>
+<a href="#" class="cta-button">Explorar produtos →</a>
+</div>
+<div class="hero-image">
+<img src="/api/placeholder/400/320" alt="Mercearia">
+</div>
+</div>
+<div class="features">
+<div class="feature-card">
+<div class="feature-icon">⭕</div>
+<div>
+<h3>Sem taxas extras</h3>
+<p>Zero comissões para vendedores e consumidores</p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">plusplus</div>
+<div>
+<h3>Payment por Pix</h3>
+<p>Rápido, seguro e sem complicações</p>
+</div>
+</div>
+<div class="feature-card">
+<div class="feature-icon">plusstheorem</div>
+<div>
+<h3>Frete Grátis</h3>
+<p>Em todas as suas compras, sem valor mínimo</p>
+</div>
+</div>
+</div>
+<div class="categories">
+<h2 class="section-title">Categorias em Verde</h2>
+<!-- Aqui iria a lista de categorias -->
+<a href="#" class="view-all">Ver Todas</a>
+</div>
+<div class="sell-section">
+<div class="sell-content">
+<h2>Comprar seu produto</h2>
+<p>Comece a ver todos os produtos localizados e boas promoções</p>
+<div class="sell-features">
+<div class="sell-feature">
+<p>Sua propria latitude está definida por um valor fixo</p>
+</div>
+<div class="sell-feature">
+<p>Comece a ser consultado em minutos</p>
+</div>
+<div class="sell-feature">
+<p>Conecte-se diretamente com todos os vendedores</p>
+</div>
+<div class="sell-feature">
+<p>Receba pelo Pixels automaticamente</p>
+</div>
+<a href="#" class="sell-cta">Comece um vendendo →</a>
+</div>
+<div class="sell-image">
+<img src="/api/placeholder/400/320" alt="Vendendo seu produto">
+</div>
+</div>
+<div class="sertao-banner">
+<h2>Pronto para descobrir os sabores do sertão</h2>
+<p class="sertao-description">Apoie productos locals, economize com produtos sem taxas, e desfrute de produtos naturais e de qualidade com precepção.</p>
+<div class="sertao-buttons">
+<a href="#" class="btn-white">Explorar produtos →</a>
+<a href="#" class="btn-outline">Seja um vendendo</a>
+</div>
+</div>
+<footer>
+<div class="footer-top">
+<div class="footer-column">
+<h3 class="footer-title">Verde</h3>
+<p>Conecte o campo à sua casa, sem intermediários ou taxas extras.</p>
+<div class="social-icons">
+<a href="#">📱</a>
+<a href="#">Facebook</a>
+<a href="#">Twitter</a>
+<a href="#">Instagram</a>
+</div>
+</div>
+<div class="footer-column">
+<h3 class="footer-title">Navegação</h3>
+<div class="footer-links">
+<a href="#">Página Inicial</a>
+<a href="#">Categorias</a>
+<a href="#">Produtos Populares</a>
+<a href="#">Vendedores</a>
+<a href="#">como funcione</a>
+</div>
+</div>
+<div class="footer-column">
+<h3 class="footer-title">Contato</h3>
+<p>📧 contato@verde.com.br</p>
+<p>📱 (85) 3876-5422</p>
+<div class="newsletter">
+<input type="email" placeholder="Receba nossos novidades">
+<button>→</button>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 Verde. Todos os direitos reservados.</p>
+</div>
+</footer>
+</body>
+</html>
